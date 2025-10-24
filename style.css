@@ -1,0 +1,126 @@
+/* ======== RESET ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ======== BODY ======== */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* ======== CONTAINER ======== */
+#divTempo {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: #fff;
+}
+
+/* ======== TÍTULO ======== */
+#nomeLugar {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ======== INPUT E BOTÃO ======== */
+#divInput {
+  margin-bottom: 10px;
+}
+
+#inputCidade {
+  width: 100%;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+#divBtn {
+  margin-bottom: 20px;
+}
+
+#buscar {
+  background: #0078ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#buscar:hover {
+  background: #005ec2;
+}
+
+/* ======== CLIMA ======== */
+#clima {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#imgClima {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: none; /* inicialmente escondido */
+}
+
+/* Quando tiver imagem válida, exibe */
+#imgClima[src*="http"], 
+#imgClima[src*="https"] {
+  display: block;
+}
+
+
+#vlClima {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ======== TEMPERATURA E UMIDADE ======== */
+#temperatura {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#umidade {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 500px) {
+  #divTempo {
+    padding: 25px 20px;
+  }
+
+  #imgClima {
+    width: 80px;
+    height: 80px;
+  }
+
+  #temperatura {
+    font-size: 2rem;
+  }
+}
